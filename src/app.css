@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind compontents;
+@tailwind utilities;
+
+* {
+	@apply font-[Poppins] text-white;
+}
+
+button {
+	@apply hover:scale-105 text-imperial-red active:text-xanthous
+}
+
+@layer base {
+	@font-face {
+		font-family: 'Poppins';
+		src: url("./lib/poppins/Poppins-Regular.otf");
+		font-weight: normal;
+	}
+
+	@font-face {
+		font-family: 'Poppins';
+		src: url("./lib/poppins/Poppins-Bold.otf");
+		font-weight: bold;
+	}
+}
+
+@theme {
+	--color-white: #ffffff;
+	--color-eerie-black: #1c1c1c;
+	--color-xanthous: #f6b14b;
+	--color-imperial-red: #ff4848;
+	--color-crayola-orange: #ff8547;
+	--color-steel-blue: #3581b8;
+	--color-bittersweet: #ff6663;
+	--color-gunmetal: #20282c;
+	--color-indigo-dye: #294f6a;
+	--color-eminence: #6c3082;
+	--color-jungle-green: #49a078;
+}
