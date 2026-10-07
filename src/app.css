@@ -7,7 +7,7 @@
 }
 
 button {
-	@apply hover:scale-105 text-imperial-red active:text-xanthous
+	@apply hover:scale-107 active:text-xanthous
 }
 
 @layer base {
