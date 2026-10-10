@@ -7,7 +7,11 @@
 }
 
 button {
-	@apply hover:scale-107 active:text-xanthous
+	@apply hover:scale-105 active:text-xanthous
+}
+
+input {
+	@apply focus:outline-2 focus:outline-xanthous hover:outline-1 hover:outline-crayola-orange
 }
 
 @layer base {
