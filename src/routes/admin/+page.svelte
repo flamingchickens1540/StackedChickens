@@ -49,10 +49,10 @@
         <!--next match-->
         <div class="grid grid-cols-3 grid-flow-col gap-2 text-sm mb-2">
             <input type="text" class="col-span-1 bg-gunmetal rounded p-2" placeholder="Match Key" bind:value={matchKey}>
-            <button class="col-span-1 simple bg-gunmetal rounded p-2" onclick={loadMatch}>
+            <button class="simple col-span-1 simple bg-gunmetal rounded p-2" onclick={loadMatch}>
                 Load Match
             </button>
-            <button class="col-span-1 simple bg-gunmetal rounded p-2" onclick={queueMatch}>
+            <button class="simple col-span-1 simple bg-gunmetal rounded p-2" onclick={queueMatch}>
                 Queue Match
             </button>
         </div>
@@ -86,7 +86,7 @@
         <div class="bg-eerie-black rounded mt-2">
             {#each scoutQueue, i}
                 <div class="p-1 {i == 0 ? "" : "border-t-1"} border-white/25">
-                    <button class="hover:opacity-50 hover:line-through decoration-2 hover:scale-100" onclick={() => removeScout(i)}>
+                    <button class="simple hover:opacity-50 hover:line-through decoration-2 hover:scale-100" onclick={() => removeScout(i)}>
                         {scoutQueue[i]}
                     </button>
                 </div>
@@ -95,17 +95,17 @@
     </div>
     <!--buttons-->
     <div class="col-span-1 bg-gunmetal p-3 text-center rounded">
-        <button class="bg-eerie-black p-2 rounded text-center w-full" onclick={clearRobots}>
+        <button class="simple bg-eerie-black p-2 rounded text-center w-full" onclick={clearRobots}>
             Clear Robots
         </button>
         <hr class="my-2 opacity-50">
         <input placeholder="Match Key" class="bg-eerie-black rounded p-2 w-full">
         
-        <button class="bg-eerie-black p-2 rounded text-center w-full mt-2" onclick={loadEvent}>
+        <button class="simple bg-eerie-black p-2 rounded text-center w-full mt-2" onclick={loadEvent}>
             Load New Event
         </button>
 
-        <button class="bg-eerie-black p-2 rounded text-center w-full mt-2" onclick={updateData}>
+        <button class="simple bg-eerie-black p-2 rounded text-center w-full mt-2" onclick={updateData}>
             Update Match Data
         </button>
     </div>

@@ -6,7 +6,7 @@
 	@apply font-[Poppins] text-white;
 }
 
-button {
+button.simple {
 	@apply hover:scale-105 active:text-xanthous
 }
 
