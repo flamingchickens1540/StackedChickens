@@ -3,6 +3,7 @@
 	import RadioSection from "$lib/components/RadioGroup.svelte";
 	import CheckSection from "$lib/components/CheckGroup.svelte";
     import TextArea from "$lib/components/TextArea.svelte";
+	import { goto } from "$app/navigation";
 
 
     let data = $state({
@@ -19,6 +20,10 @@
         timeSpent: "",
         notes: "",
     })
+
+    function submit() {
+        goto("/pitscout/teamlist")
+    }
 </script>
 
 <center>
@@ -38,17 +43,15 @@
     <TextArea label="Handoffs" bind:content={data.handoffs}></TextArea>
     <CheckSection label="Can pick up cones:" source={data} options={[{label: "Upright", key: "canPickUpright"}, {label: "Tipped", key:"canPickTipped"}]}></CheckSection>
 </LabeledSection>
-<!-- Speed done
-Drivetrain done
 
-Max Height
-Weight done
-Center of Gravity done
-More details to come
+<LabeledSection label="Misc.">
+    <TextArea label="How much drive practice was had?" bind:content={data.drivePractice}></TextArea>
+    <TextArea label="Time spent building/designing robot?" bind:content={data.timeSpent}></TextArea>
+    <TextArea label="Other notes" bind:content={data.handoffs}></TextArea>
+</LabeledSection>
 
-What cones they
-How far they extend
-Handoffs
-Additional comments
-How long did you spend designing/building your robot
-Do you have any driver practice -->
+<center>
+    <button class="simple bg-gunmetal rounded p-3 mb-3 text-xl" onclick={submit}>
+        Submit
+    </button>
+</center>

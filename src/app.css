@@ -7,7 +7,7 @@
 }
 
 button.simple {
-	@apply hover:scale-105 active:text-xanthous
+	@apply hover:scale-103 active:text-xanthous
 }
 
 input {
